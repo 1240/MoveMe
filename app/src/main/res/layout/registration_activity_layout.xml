@@ -1,0 +1,153 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/blue_main"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background_white"
+            app:tabGravity="fill"
+            app:tabSelectedTextColor="@color/dark_gray_text"
+            app:tabTextColor="@color/dark_gray_text_tranparent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="@dimen/default_margin"
+                android:text="@string/personal_data"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/green_text" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/dark_gray_text_tranparent" />
+
+            <EditText
+                android:id="@+id/ed_first_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:gravity="start"
+                android:hint="@string/first_name"
+                android:imeOptions="actionNext"
+                android:inputType="textCapSentences"
+                android:padding="@dimen/default_margin"
+                android:singleLine="true"
+                android:textColor="@color/dark_gray_text"
+                android:textColorHint="@color/dark_gray_text_tranparent" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/dark_gray_text_tranparent" />
+
+            <EditText
+                android:id="@+id/ed_second_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:gravity="start"
+                android:hint="@string/second_name"
+                android:imeOptions="actionNext"
+                android:inputType="textCapSentences"
+                android:padding="@dimen/default_margin"
+                android:singleLine="true"
+                android:textColor="@color/dark_gray_text"
+                android:textColorHint="@color/dark_gray_text_tranparent" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/dark_gray_text_tranparent" />
+
+            <EditText
+                android:id="@+id/ed_middle_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:gravity="start"
+                android:hint="@string/middle_name"
+                android:imeOptions="actionNext"
+                android:inputType="textCapSentences"
+                android:padding="@dimen/default_margin"
+                android:singleLine="true"
+                android:textColor="@color/dark_gray_text"
+                android:textColorHint="@color/dark_gray_text_tranparent" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/dark_gray_text_tranparent" />
+
+            <EditText
+                android:id="@+id/ed_mail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:gravity="start"
+                android:hint="@string/mail"
+                android:imeOptions="actionDone"
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/default_margin"
+                android:singleLine="true"
+                android:textColor="@color/dark_gray_text"
+                android:textColorHint="@color/dark_gray_text_tranparent" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/dark_gray_text_tranparent" />
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/default_margin"
+            android:gravity="center"
+            android:text="@string/registration_hint"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/dark_gray_text_tranparent" />
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_margin="@dimen/default_margin"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_item_height"
+            android:background="@drawable/order_button_selector"
+            android:text="@string/submit_button_text"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

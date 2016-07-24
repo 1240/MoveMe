@@ -1,0 +1,422 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_white">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="@dimen/default_margin"
+                    android:text="@string/evac_details_title"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/green_text" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/dark_gray_text_tranparent" />
+
+                <LinearLayout
+                    android:id="@+id/ll_weight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/default_item_selector"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/default_margin"
+                        android:gravity="center_vertical"
+                        android:text="@string/evac_weight"
+                        android:textColor="@color/dark_gray_text"
+                        android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                    <ru.moleculus.moveme.customview.FieldDataEditText
+                        android:id="@+id/tv_weight"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/default_item_height"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/default_margin"
+                        android:gravity="center_vertical|right"
+                        android:hint="@string/evac_weight"
+                        android:inputType="number"
+                        android:tag="evac_weight"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/dark_gray_text_tranparent"
+                        android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                    <ImageView
+                        android:layout_width="1dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_navigation_chevron_right" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/dark_gray_text_tranparent" />
+
+                <LinearLayout
+                    android:id="@+id/ll_vehicle_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/default_item_selector"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/default_margin"
+                        android:gravity="center_vertical"
+                        android:text="@string/evac_type"
+                        android:textColor="@color/dark_gray_text"
+                        android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                    <Spinner
+                        android:id="@+id/tv_vehicle_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/default_item_height"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/default_margin"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:hint="@string/choice_hint"
+                        android:tag="evac_vehicle_type"
+                        android:textColor="@color/dark_gray_text_tranparent"
+                        android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="1dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_navigation_chevron_right" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/dark_gray_text_tranparent" />
+
+                <LinearLayout
+                    android:id="@+id/ll_wheel_lock"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/default_item_selector"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/default_margin"
+                        android:gravity="center_vertical"
+                        android:text="@string/evac_wheel_lock_type"
+                        android:textColor="@color/dark_gray_text"
+                        android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                    <Spinner
+                        android:id="@+id/tv_wheel_lock"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/default_item_height"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/default_margin"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:hint="@string/choice_hint"
+                        android:tag="evac_vehicle_wheels"
+                        android:textColor="@color/dark_gray_text_tranparent"
+                        android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                    <ImageView
+                        android:layout_width="1dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_navigation_chevron_right" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/dark_gray_text_tranparent" />
+
+                <LinearLayout
+                    android:id="@+id/ll_evac_place"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/default_item_selector"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/default_margin"
+                        android:gravity="center_vertical"
+                        android:text="@string/evac_place"
+                        android:textColor="@color/dark_gray_text"
+                        android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                    <Spinner
+                        android:id="@+id/tv_evac_place"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/default_item_height"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/default_margin"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:hint="@string/choice_hint"
+                        android:tag="evac_vehicle_cond"
+                        android:textColor="@color/dark_gray_text_tranparent"
+                        android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                    <ImageView
+                        android:layout_width="1dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_navigation_chevron_right" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/dark_gray_text_tranparent" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="@dimen/default_margin"
+                    android:text="@string/evac_conditions"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/green_text" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/dark_gray_text_tranparent" />
+
+                <LinearLayout
+                    android:id="@+id/ll_ditch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/default_item_selector"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/default_item_height"
+                        android:layout_height="@dimen/default_item_height"
+                        android:padding="@dimen/small_margin"
+                        android:src="@drawable/icons_upside_down" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="@string/evac_ditch"
+                        android:textColor="@color/dark_gray_text"
+                        android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                    <android.support.v7.widget.SwitchCompat
+                        android:id="@+id/sw_ditch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/default_margin"
+                        android:tag="ev_ditch" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/dark_gray_text_tranparent" />
+
+                <LinearLayout
+                    android:id="@+id/ll_upside_down"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/default_item_selector"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/default_item_height"
+                        android:layout_height="@dimen/default_item_height"
+                        android:padding="@dimen/small_margin"
+                        android:src="@drawable/icons_overturned" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="@string/evac_upside_down"
+                        android:textColor="@color/dark_gray_text"
+                        android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                    <android.support.v7.widget.SwitchCompat
+                        android:id="@+id/sw_upside_down"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/default_margin"
+                        android:tag="ev_upside_down" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/dark_gray_text_tranparent" />
+
+                <LinearLayout
+                    android:id="@+id/ll_no_rope"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/default_item_selector"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/default_item_height"
+                        android:layout_height="@dimen/default_item_height"
+                        android:padding="@dimen/small_margin"
+                        android:src="@drawable/icons_no_tow_rope" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="@string/evac_no_tow_rope"
+                        android:textColor="@color/dark_gray_text"
+                        android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                    <android.support.v7.widget.SwitchCompat
+                        android:id="@+id/sw_no_tow_rope"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/default_margin"
+                        android:tag="ev_no_tow_rope" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/dark_gray_text_tranparent" />
+
+                <LinearLayout
+                    android:id="@+id/ll_low_ride"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/default_item_selector"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/default_item_height"
+                        android:layout_height="@dimen/default_item_height"
+                        android:padding="@dimen/small_margin"
+                        android:src="@drawable/icons_low_ride" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="@string/evac_low_ride"
+                        android:textColor="@color/dark_gray_text"
+                        android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                    <android.support.v7.widget.SwitchCompat
+                        android:id="@+id/sw_low_ride"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/default_margin"
+                        android:tag="ev_low_ride" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/dark_gray_text_tranparent" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="@dimen/default_margin"
+                    android:text="@string/photos"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/green_text" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/dark_gray_text_tranparent" />
+
+                <ru.moleculus.moveme.customview.MoveMeImageGallery
+                    android:id="@+id/gallery"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/dark_gray_text_tranparent" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</android.support.design.widget.CoordinatorLayout>

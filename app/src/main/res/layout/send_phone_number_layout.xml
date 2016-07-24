@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/default_margin"
+        android:src="@drawable/logo" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/dark_gray_text_tranparent" />
+
+
+    <com.noisyz.patternededittext.PatternedEditText xmlns:patternedEditText="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/ed_phone_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="number"
+        android:padding="@dimen/small_margin"
+        android:singleLine="true"
+        android:textColor="@color/dark_gray_text"
+        patternedEditText:pattern="@string/phone_number_pattern" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/dark_gray_text_tranparent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/default_margin">
+
+        <Button
+            android:id="@+id/btn_send_phone"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_item_height"
+            android:background="@drawable/order_button_selector"
+            android:text="@string/get_sms_code_button_text"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/get_sms_code_hint"
+            android:textColor="@color/dark_gray_text_tranparent" />
+
+    </RelativeLayout>
+</LinearLayout>

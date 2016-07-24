@@ -1,0 +1,388 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_above="@+id/btn_address_save">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_margin"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="@dimen/default_margin"
+                        android:text="@string/location_address"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/green_text" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/dark_gray_text_tranparent" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/default_item_height"
+                        android:background="@drawable/default_item_selector"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/default_margin"
+                            android:gravity="center_vertical"
+                            android:text="@string/location_city"
+                            android:textColor="@color/dark_gray_text"
+                            android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                        <ru.moleculus.moveme.customview.FieldDataEditText
+                            android:id="@+id/location_city"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="right|center_vertical"
+                            android:hint="@string/location_city"
+                            android:imeOptions="actionNext"
+                            android:inputType="textCapSentences"
+                            android:paddingLeft="@dimen/default_margin"
+                            android:paddingRight="@dimen/default_margin"
+                            android:singleLine="true"
+                            android:tag="city"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/dark_gray_text_tranparent"
+                            android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/dark_gray_text_tranparent" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/default_item_height"
+                        android:background="@drawable/default_item_selector"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/default_margin"
+                            android:gravity="center_vertical"
+                            android:text="@string/location_street"
+                            android:textColor="@color/dark_gray_text"
+                            android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                        <ru.moleculus.moveme.customview.FieldDataEditText
+                            android:id="@+id/location_street"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="right|center_vertical"
+                            android:hint="@string/location_street"
+                            android:imeOptions="actionNext"
+                            android:inputType="textCapSentences"
+                            android:paddingLeft="@dimen/default_margin"
+                            android:paddingRight="@dimen/default_margin"
+                            android:singleLine="true"
+                            android:tag="street"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/dark_gray_text_tranparent"
+                            android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/dark_gray_text_tranparent" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/default_item_height"
+                        android:background="@drawable/default_item_selector"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/default_margin"
+                            android:gravity="center_vertical"
+                            android:text="@string/location_house"
+                            android:textColor="@color/dark_gray_text"
+                            android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                        <ru.moleculus.moveme.customview.FieldDataEditText
+                            android:id="@+id/location_house"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="right|center_vertical"
+                            android:hint="@string/location_house"
+                            android:imeOptions="actionNext"
+                            android:inputType="textCapSentences"
+                            android:paddingLeft="@dimen/default_margin"
+                            android:paddingRight="@dimen/default_margin"
+                            android:singleLine="true"
+                            android:tag="house"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/dark_gray_text_tranparent"
+                            android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/dark_gray_text_tranparent" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/default_item_height"
+                        android:background="@drawable/default_item_selector"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/default_margin"
+                            android:gravity="center_vertical"
+                            android:text="@string/location_block"
+                            android:textColor="@color/dark_gray_text"
+                            android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                        <ru.moleculus.moveme.customview.FieldDataEditText
+                            android:id="@+id/location_block"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="right|center_vertical"
+                            android:hint="@string/location_block"
+                            android:imeOptions="actionNext"
+                            android:inputType="textCapSentences"
+                            android:paddingLeft="@dimen/default_margin"
+                            android:paddingRight="@dimen/default_margin"
+                            android:singleLine="true"
+                            android:tag="block"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/dark_gray_text_tranparent"
+                            android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/dark_gray_text_tranparent" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/default_item_height"
+                        android:background="@drawable/default_item_selector"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/default_margin"
+                            android:gravity="center_vertical"
+                            android:text="@string/location_block_number"
+                            android:textColor="@color/dark_gray_text"
+                            android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                        <ru.moleculus.moveme.customview.FieldDataEditText
+                            android:id="@+id/location_block_number"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="right|center_vertical"
+                            android:hint="@string/location_block_number"
+                            android:imeOptions="actionNext"
+                            android:inputType="textCapSentences"
+                            android:paddingLeft="@dimen/default_margin"
+                            android:paddingRight="@dimen/default_margin"
+                            android:singleLine="true"
+                            android:tag="block_number"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/dark_gray_text_tranparent"
+                            android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/dark_gray_text_tranparent" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_margin"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="@dimen/default_margin"
+                        android:text="@string/location_additional"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/green_text" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/dark_gray_text_tranparent" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/default_item_height"
+                        android:background="@drawable/default_item_selector"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/default_margin"
+                            android:gravity="center_vertical"
+                            android:text="@string/location_contact"
+                            android:textColor="@color/dark_gray_text"
+                            android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                        <ru.moleculus.moveme.customview.FieldDataEditText
+                            android:id="@+id/location_contact"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="right|center_vertical"
+                            android:hint="@string/location_contact"
+                            android:imeOptions="actionNext"
+                            android:inputType="textCapSentences"
+                            android:paddingLeft="@dimen/default_margin"
+                            android:paddingRight="@dimen/default_margin"
+                            android:singleLine="true"
+                            android:tag="contact_name"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/dark_gray_text_tranparent"
+                            android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/dark_gray_text_tranparent" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/default_item_height"
+                        android:background="@drawable/default_item_selector"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/default_margin"
+                            android:gravity="center_vertical"
+                            android:text="@string/location_phone"
+                            android:textColor="@color/dark_gray_text"
+                            android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                        <ru.moleculus.moveme.customview.FieldDataEditText
+                            android:id="@+id/location_phone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="right|center_vertical"
+                            android:hint="@string/location_phone"
+                            android:imeOptions="actionNext"
+                            android:paddingLeft="@dimen/default_margin"
+                            android:paddingRight="@dimen/default_margin"
+                            android:singleLine="true"
+                            android:tag="contact_phone"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/dark_gray_text_tranparent"
+                            android:textColorHint="@color/dark_gray_text_tranparent"
+                            android:inputType="number" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/dark_gray_text_tranparent" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/default_item_selector"
+                        android:orientation="horizontal">
+
+                        <ru.moleculus.moveme.customview.FieldDataEditText
+                            android:id="@+id/location_comment"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/comment_field_height"
+                            android:layout_gravity="center"
+                            android:gravity="left"
+                            android:hint="@string/location_comment"
+                            android:imeOptions="actionDone"
+                            android:inputType="textCapSentences"
+                            android:paddingLeft="@dimen/default_margin"
+                            android:paddingRight="@dimen/default_margin"
+                            android:singleLine="true"
+                            android:tag="comment"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/dark_gray_text_tranparent"
+                            android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/dark_gray_text_tranparent" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <Button
+            android:id="@+id/btn_address_save"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_item_height"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/default_margin"
+            android:background="@drawable/order_button_selector"
+            android:text="@string/location_save"
+            android:textColor="@android:color/white" />
+    </RelativeLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ru.moleculus.moveme.customview.BlurImageView
+        android:id="@+id/iv_user_photo_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/linearLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/linearLayout"
+        android:scaleType="centerCrop"
+        android:tag="user_pic#1" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <ru.moleculus.moveme.customview.RoundedImageView
+            android:id="@+id/iv_user_photo"
+            android:layout_width="@dimen/avatar_image_size"
+            android:layout_height="@dimen/avatar_image_size"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/default_margin"
+            android:tag="user_pic#2" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/default_margin"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/very_small_margin"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_user_first_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="firstname#1"
+                    android:text="New Text"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_user_last_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/very_small_margin"
+                    android:tag="lastname#1"
+                    android:text="New Text"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/very_small_margin"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_user_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:tag="type_of_account"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/tv_user_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/very_small_margin"
+                    android:tag="id"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_user_mail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="mail"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_user_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/very_small_margin"
+                android:drawableLeft="@drawable/ic_toggle_star_outline"
+                android:gravity="center_vertical"
+                android:tag="rating"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

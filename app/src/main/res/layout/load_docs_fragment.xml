@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/large_margin"
+            android:gravity="center"
+            android:text="@string/load_docs_description" />
+
+        <LinearLayout
+            android:id="@+id/first_page"
+            android:addStatesFromChildren="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/default_margin"
+            android:layout_marginLeft="@dimen/default_margin"
+            android:layout_marginRight="@dimen/default_margin"
+            android:background="@drawable/orders_reverse_button_normal"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.AppCompatCheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/large_margin"
+                android:clickable="false"
+                android:tag="isFirstPageLoaded"
+                android:text="@string/load_docs_first_page"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/blue_main" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/registration_page"
+            android:addStatesFromChildren="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/default_margin"
+            android:layout_marginRight="@dimen/default_margin"
+            android:background="@drawable/orders_reverse_button_normal"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.AppCompatCheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/large_margin"
+                android:clickable="false"
+                android:tag="isRegistrationPageLoaded"
+                android:text="@string/load_docs_registration_place"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/blue_main" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_send_docs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/default_margin"
+        android:background="@drawable/order_button_selector"
+        android:text="@string/load_docs_send"
+        android:textColor="@android:color/white" />
+
+</RelativeLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PatternedEditText">
+        <attr name="pattern" format="string"/>
+        <attr name="default_char" format="string"/>
+    </declare-styleable>
+</resources>

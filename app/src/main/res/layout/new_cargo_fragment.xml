@@ -1,0 +1,537 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_above="@+id/btn_cargo_save">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_margin"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="@dimen/default_margin"
+                        android:text="@string/cargo_main"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/green_text" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/dark_gray_text_tranparent" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/default_item_height"
+                        android:background="@drawable/default_item_selector"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/default_margin"
+                            android:gravity="center_vertical"
+                            android:text="@string/cargo_description"
+                            android:textColor="@color/dark_gray_text"
+                            android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                        <ru.moleculus.moveme.customview.FieldDataEditText
+                            android:id="@+id/cargo_description"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="right|center_vertical"
+                            android:hint="@string/cargo_description"
+                            android:imeOptions="actionNext"
+                            android:inputType="textCapSentences"
+                            android:paddingLeft="@dimen/default_margin"
+                            android:paddingRight="@dimen/default_margin"
+                            android:singleLine="true"
+                            android:tag="title"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/dark_gray_text_tranparent"
+                            android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/dark_gray_text_tranparent" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/default_item_height"
+                        android:background="@drawable/default_item_selector"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/default_margin"
+                            android:gravity="center_vertical"
+                            android:text="@string/cargo_weight"
+                            android:textColor="@color/dark_gray_text"
+                            android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                        <ru.moleculus.moveme.customview.FieldDataEditText
+                            android:id="@+id/cargo_weight"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="right|center_vertical"
+                            android:hint="@string/cargo_weight"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:paddingLeft="@dimen/default_margin"
+                            android:paddingRight="@dimen/default_margin"
+                            android:singleLine="true"
+                            android:tag="weight"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/dark_gray_text_tranparent"
+                            android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/dark_gray_text_tranparent" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/default_item_height"
+                        android:background="@drawable/default_item_selector"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/default_margin"
+                            android:gravity="center_vertical"
+                            android:text="@string/cargo_lenght"
+                            android:textColor="@color/dark_gray_text"
+                            android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                        <ru.moleculus.moveme.customview.FieldDataEditText
+                            android:id="@+id/cargo_lenght"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="right|center_vertical"
+                            android:hint="@string/cargo_lenght"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:paddingLeft="@dimen/default_margin"
+                            android:paddingRight="@dimen/default_margin"
+                            android:singleLine="true"
+                            android:tag="size_x"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/dark_gray_text_tranparent"
+                            android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/dark_gray_text_tranparent" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/default_item_height"
+                        android:background="@drawable/default_item_selector"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/default_margin"
+                            android:gravity="center_vertical"
+                            android:text="@string/cargo_width"
+                            android:textColor="@color/dark_gray_text"
+                            android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                        <ru.moleculus.moveme.customview.FieldDataEditText
+                            android:id="@+id/cargo_width"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="right|center_vertical"
+                            android:hint="@string/cargo_width"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:paddingLeft="@dimen/default_margin"
+                            android:paddingRight="@dimen/default_margin"
+                            android:singleLine="true"
+                            android:tag="size_y"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/dark_gray_text_tranparent"
+                            android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/dark_gray_text_tranparent" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/default_item_height"
+                        android:background="@drawable/default_item_selector"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/default_margin"
+                            android:gravity="center_vertical"
+                            android:text="@string/cargo_height"
+                            android:textColor="@color/dark_gray_text"
+                            android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                        <ru.moleculus.moveme.customview.FieldDataEditText
+                            android:id="@+id/cargo_height"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="right|center_vertical"
+                            android:hint="@string/cargo_height"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:paddingLeft="@dimen/default_margin"
+                            android:paddingRight="@dimen/default_margin"
+                            android:singleLine="true"
+                            android:tag="size_z"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/dark_gray_text_tranparent"
+                            android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/dark_gray_text_tranparent" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/default_item_height"
+                        android:background="@drawable/default_item_selector"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/default_margin"
+                            android:gravity="center_vertical"
+                            android:text="@string/cargo_packaging_type"
+                            android:textColor="@color/dark_gray_text"
+                            android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                        <Spinner
+                            android:id="@+id/cargo_packaging_type"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/default_item_height"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="@dimen/default_margin"
+                            android:hint="@string/cargo_height"
+                            android:tag="packing_type" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/dark_gray_text_tranparent" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_margin"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="@dimen/default_margin"
+                        android:text="@string/cargo_temp_mode"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/green_text" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/dark_gray_text_tranparent" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/default_item_selector"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/default_item_height"
+                            android:layout_height="@dimen/default_item_height"
+                            android:padding="@dimen/small_margin"
+                            android:src="@drawable/icons_refrigirator" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="@string/cargo_refrigerator"
+                            android:textColor="@color/dark_gray_text"
+                            android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                        <android.support.v7.widget.SwitchCompat
+                            android:id="@+id/sw_cargo_temp_mode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="@dimen/default_margin"
+                            android:tag="refrigerator#1" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/dark_gray_text_tranparent" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/default_item_selector"
+                        android:orientation="horizontal"
+                        android:tag="refrigerator#2">
+
+                        <TextView
+                            android:layout_width="@dimen/default_list_item_height"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="@dimen/default_margin"
+                            android:gravity="center"
+                            android:tag="temperature_from"
+                            android:textColor="@color/dark_gray_text"
+                            android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                        <com.edmodo.rangebar.RangeBar
+                            android:id="@+id/range_seek_bar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginTop="@dimen/default_margin"
+                            android:layout_marginBottom="@dimen/default_margin" />
+
+                        <TextView
+                            android:layout_width="@dimen/default_list_item_height"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="@dimen/default_margin"
+                            android:gravity="center"
+                            android:tag="temperature_to"
+                            android:textColor="@color/dark_gray_text"
+                            android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/dark_gray_text_tranparent" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_margin"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="@dimen/default_margin"
+                        android:text="@string/cargo_insurance_title"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/green_text" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/dark_gray_text_tranparent" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_cargo_sideloader"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/default_item_selector"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/default_item_height"
+                            android:layout_height="@dimen/default_item_height"
+                            android:padding="@dimen/small_margin"
+                            android:src="@drawable/icons_insurance" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="@string/cargo_insurance"
+                            android:textColor="@color/dark_gray_text"
+                            android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                        <android.support.v7.widget.SwitchCompat
+                            android:id="@+id/sw_cargo_insurance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="@dimen/default_margin"
+                            android:tag="insurance#1" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/dark_gray_text_tranparent" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/default_item_height"
+                        android:background="@drawable/default_item_selector"
+                        android:orientation="horizontal"
+                        android:tag="insurance#2">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/default_margin"
+                            android:gravity="center_vertical"
+                            android:text="@string/cargo_insurance_sum"
+                            android:textColor="@color/dark_gray_text"
+                            android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                        <ru.moleculus.moveme.customview.FieldDataEditText
+                            android:id="@+id/cargo_insurance_price"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/default_item_height"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="right|center_vertical"
+                            android:hint="@string/cargo_insurance_sum"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:paddingLeft="@dimen/default_margin"
+                            android:paddingRight="@dimen/default_margin"
+                            android:singleLine="true"
+                            android:tag="price"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/dark_gray_text_tranparent"
+                            android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/dark_gray_text_tranparent" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_margin"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="@dimen/default_margin"
+                        android:text="@string/cargo_pic"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/green_text" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/dark_gray_text_tranparent" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/dark_gray_text_tranparent" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/navigation_drawer_width"
+                        android:background="@drawable/default_item_selector"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/cargo_pic"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_content_add_image"
+                            android:tag="pic" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/dark_gray_text_tranparent" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <Button
+            android:id="@+id/btn_cargo_save"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_item_height"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/default_margin"
+            android:background="@drawable/order_button_selector"
+            android:text="@string/cargo_save"
+            android:textColor="@android:color/white" />
+    </RelativeLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

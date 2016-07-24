@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/large_margin"
+        android:layout_marginLeft="@dimen/large_margin"
+        android:layout_marginRight="@dimen/large_margin"
+        android:layout_marginTop="@dimen/gallery_item_size"
+        android:gravity="center"
+        android:text="@string/enter_code_description"
+        android:textColor="@color/dark_gray_text_tranparent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/dark_gray_text_tranparent" />
+
+
+    <com.noisyz.patternededittext.PatternedEditText xmlns:patternedEditText="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/ed_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/small_margin"
+        android:background="@android:color/white"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/enter_code_hint"
+        android:tag="verifyCode"
+        android:inputType="number"
+        android:singleLine="true"
+        android:textColor="@color/dark_gray_text"
+        android:textColorHint="@color/dark_gray_text_tranparent"
+        patternedEditText:pattern="@string/sms_code_pattern" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/dark_gray_text_tranparent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/default_margin">
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_item_height"
+            android:background="@drawable/order_button_selector"
+            android:text="@string/enter_code_done"
+            android:textColor="@android:color/white" />
+
+    </RelativeLayout>
+</LinearLayout>

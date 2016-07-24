@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ru.moleculus.moveme">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:name=".MoveMeApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".ui.activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activity.SendNumberActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysVisible" />
+        <activity
+            android:name=".ui.activity.EditPassportActivity"
+            android:label="@string/passport"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".ui.activity.CardInfoActivity"
+            android:label="@string/balance_refill_title"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".ui.activity.CreateOrderActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".ui.activity.SendSmsCodeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysVisible" />
+        <activity
+            android:name=".ui.activity.RegisterUserActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysVisible" />
+        <activity
+            android:name=".ui.activity.SetLocationActivity"
+            android:label="@string/location_screen_title"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.SetCargoActivity"
+            android:label="@string/cargo_screen_title"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.CreateTemplateActivity"
+            android:label="@string/template_screen_title"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.activity.ShowImageActivity" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="a980fdca9a3837d5fbb90ac0b85343699c32cb03" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".ui.activity.SetLocationOnMapActivity"
+            android:label="@string/title_activity_set_order_location"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.activity.VerifyMainActivity"
+            android:label="@string/verify_screen_title"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.activity.SendVerifyCodeActivity"
+            android:label="@string/enter_code"
+            android:windowSoftInputMode="stateAlwaysVisible"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.activity.LoadDocsActivity"
+            android:label="@string/load_docs"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

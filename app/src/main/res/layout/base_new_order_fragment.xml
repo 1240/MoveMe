@@ -1,0 +1,363 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/btn_order_create"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_margin"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="@dimen/default_margin"
+                        android:text="@string/description"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/green_text" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/dark_gray_text_tranparent" />
+
+                    <ru.moleculus.moveme.customview.FieldDataEditText
+                        android:id="@+id/ed_comment"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/comment_field_height"
+                        android:gravity="start"
+                        android:hint="@string/comment_hint"
+                        android:padding="@dimen/default_margin"
+                        android:tag="title"
+                        android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/dark_gray_text_tranparent" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_margin"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="@dimen/default_margin"
+                        android:text="@string/route"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/green_text" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/dark_gray_text_tranparent" />
+
+                    <ListView
+                        android:id="@+id/address_list_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:divider="@color/dark_gray_text_tranparent"
+                        android:dividerHeight="1px" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/dark_gray_text_tranparent" />
+
+                    <include
+                        android:id="@+id/address_list_footer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        layout="@layout/address_list_footer" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/dark_gray_text_tranparent" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_margin"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="@dimen/default_margin"
+                        android:text="@string/date_and_time"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/green_text" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/dark_gray_text_tranparent" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/default_item_selector"
+                        android:clickable="true"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/default_item_height"
+                            android:layout_height="@dimen/default_item_height"
+                            android:padding="@dimen/small_margin"
+                            android:src="@drawable/icons_calendar" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="@string/date"
+                            android:textColor="@color/dark_gray_text"
+                            android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                        <TextView
+                            android:id="@+id/tv_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center_vertical"
+                            android:tag="datetime"
+                            android:text="@string/date"
+                            android:textColor="@color/dark_gray_text_tranparent" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_navigation_chevron_right" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/dark_gray_text_tranparent" />
+
+                </LinearLayout>
+
+                <FrameLayout
+                    android:id="@+id/order_type_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/default_margin" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_margin"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="@dimen/default_margin"
+                        android:text="@string/tariffing"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/green_text" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/dark_gray_text_tranparent" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/default_item_height"
+                        android:background="@drawable/default_item_selector"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/default_margin"
+                            android:gravity="center_vertical"
+                            android:text="@string/tariffing_first_2_hours"
+                            android:textColor="@color/dark_gray_text"
+                            android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                        <ru.moleculus.moveme.customview.FieldDataEditText
+                            android:id="@+id/tv_first_2_hours"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="right|center_vertical"
+                            android:hint="@string/currency_unit"
+                            android:inputType="number"
+                            android:paddingLeft="@dimen/default_margin"
+                            android:paddingRight="@dimen/default_margin"
+                            android:singleLine="true"
+                            android:tag="tariff_first_2hours"
+                            android:textColor="@color/dark_gray_text_tranparent"
+                            android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/dark_gray_text_tranparent" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/default_item_height"
+                        android:background="@drawable/default_item_selector"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/default_margin"
+                            android:gravity="center_vertical"
+                            android:text="@string/tariffing_next_hours"
+                            android:textColor="@color/dark_gray_text"
+                            android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                        <ru.moleculus.moveme.customview.FieldDataEditText
+                            android:id="@+id/tv_next_hours"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="right|center_vertical"
+                            android:hint="@string/currency_unit"
+                            android:inputType="number"
+                            android:paddingLeft="@dimen/default_margin"
+                            android:paddingRight="@dimen/default_margin"
+                            android:singleLine="true"
+                            android:tag="tariff_after_2hours"
+                            android:textColor="@color/dark_gray_text_tranparent"
+                            android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/dark_gray_text_tranparent" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/default_item_height"
+                        android:background="@drawable/default_item_selector"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/default_margin"
+                            android:gravity="center_vertical"
+                            android:text="@string/tariffing_out_of_mkad_per_km"
+                            android:textColor="@color/dark_gray_text"
+                            android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                        <ru.moleculus.moveme.customview.FieldDataEditText
+                            android:id="@+id/tv_out_of_mkad_per_km"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="right|center_vertical"
+                            android:hint="@string/currency_unit"
+                            android:inputType="number"
+                            android:paddingLeft="@dimen/default_margin"
+                            android:paddingRight="@dimen/default_margin"
+                            android:singleLine="true"
+                            android:tag="tariff_out_of_mkad_per_km"
+                            android:textColor="@color/dark_gray_text_tranparent"
+                            android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/dark_gray_text_tranparent" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/default_item_height"
+                        android:background="@drawable/default_item_selector"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/default_margin"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="@string/save_price"
+                            android:textColor="@color/dark_gray_text"
+                            android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                        <android.support.v7.widget.SwitchCompat
+                            android:id="@+id/sw_save_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="@dimen/default_margin"
+                            android:gravity="center_vertical"
+                            android:tag="needSavingPrice"
+                            android:textColor="@color/dark_gray_text_tranparent" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/dark_gray_text_tranparent" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <Button
+            android:id="@+id/btn_order_create"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_item_height"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/default_margin"
+            android:background="@drawable/order_button_selector"
+            android:text="@string/button_send_order_text"
+            android:textColor="@android:color/white" />
+
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

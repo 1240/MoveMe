@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/default_item_selector"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/default_margin"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_orders_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:tag="title"
+            android:text="Диван, кресло, шкаф, кухонный гарнир"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/dark_gray_text"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_orders_point_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_margin"
+            android:tag="start"
+            android:text=" - ул. Бориса Галушкина 11, Москва"
+            android:textColor="@color/dark_gray_text" />
+
+        <TextView
+            android:id="@+id/tv_orders_point_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="end"
+            android:text=" - Шербаковская ул. 38, Москва"
+            android:textColor="@color/dark_gray_text" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_margin"
+            android:orientation="horizontal"
+            android:tag="isEvac">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/evac"
+                android:textColor="@color/dark_gray_text_tranparent" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="@dimen/small_item_height"
+                    android:layout_height="@dimen/small_item_height"
+                    android:padding="@dimen/very_small_margin"
+                    android:src="@drawable/icons_upside_down"
+                    android:tag="ev_ditch" />
+
+                <ImageView
+                    android:layout_width="@dimen/small_item_height"
+                    android:layout_height="@dimen/small_item_height"
+                    android:padding="@dimen/very_small_margin"
+                    android:src="@drawable/icons_overturned"
+                    android:tag="ev_upside_down" />
+
+                <ImageView
+                    android:layout_width="@dimen/small_item_height"
+                    android:layout_height="@dimen/small_item_height"
+                    android:padding="@dimen/very_small_margin"
+                    android:src="@drawable/icons_no_tow_rope"
+                    android:tag="ev_no_tow_rope" />
+
+                <ImageView
+                    android:layout_width="@dimen/small_item_height"
+                    android:layout_height="@dimen/small_item_height"
+                    android:padding="@dimen/very_small_margin"
+                    android:src="@drawable/icons_low_ride"
+                    android:tag="ev_low_ride" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_margin"
+            android:orientation="horizontal"
+            android:tag="isCargo">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/cargo"
+                android:textColor="@color/dark_gray_text_tranparent" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="@dimen/small_item_height"
+                    android:layout_height="@dimen/small_item_height"
+                    android:padding="@dimen/very_small_margin"
+                    android:src="@drawable/icons_pallet_truck"
+                    android:tag="hydrobort" />
+
+                <ImageView
+                    android:layout_width="@dimen/small_item_height"
+                    android:layout_height="@dimen/small_item_height"
+                    android:padding="@dimen/very_small_margin"
+                    android:src="@drawable/icons_hydrolift"
+                    android:tag="hydrolift" />
+
+                <ImageView
+                    android:layout_width="@dimen/small_item_height"
+                    android:layout_height="@dimen/small_item_height"
+                    android:padding="@dimen/very_small_margin"
+                    android:src="@drawable/icons_side_loading"
+                    android:tag="sideloader" />
+
+                <ImageView
+                    android:layout_width="@dimen/small_item_height"
+                    android:layout_height="@dimen/small_item_height"
+                    android:padding="@dimen/very_small_margin"
+                    android:src="@drawable/icons_arcs"
+                    android:tag="sealing" />
+
+                <ImageView
+                    android:layout_width="@dimen/small_item_height"
+                    android:layout_height="@dimen/small_item_height"
+                    android:padding="@dimen/very_small_margin"
+                    android:src="@drawable/icons_passport"
+                    android:tag="driver_russian" />
+
+                <ImageView
+                    android:layout_width="@dimen/small_item_height"
+                    android:layout_height="@dimen/small_item_height"
+                    android:padding="@dimen/very_small_margin"
+                    android:src="@drawable/icons_bill"
+                    android:tag="attorney_letter" />
+
+                <ImageView
+                    android:layout_width="@dimen/small_item_height"
+                    android:layout_height="@dimen/small_item_height"
+                    android:padding="@dimen/very_small_margin"
+                    android:src="@drawable/icons_ttk"
+                    android:tag="ttk_entrance" />
+
+                <ImageView
+                    android:layout_width="@dimen/small_item_height"
+                    android:layout_height="@dimen/small_item_height"
+                    android:padding="@dimen/very_small_margin"
+                    android:src="@drawable/icons_center"
+                    android:tag="center_entrance" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_margin"
+            android:orientation="horizontal"
+            android:tag="isPass">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/pass"
+                android:textColor="@color/dark_gray_text_tranparent" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="@dimen/small_item_height"
+                    android:layout_height="@dimen/small_item_height"
+                    android:padding="@dimen/very_small_margin"
+                    android:src="@drawable/icons_kids"
+                    android:tag="children" />
+
+                <ImageView
+                    android:layout_width="@dimen/small_item_height"
+                    android:layout_height="@dimen/small_item_height"
+                    android:padding="@dimen/very_small_margin"
+                    android:src="@drawable/icons_wedding"
+                    android:tag="wedding" />
+
+                <ImageView
+                    android:layout_width="@dimen/small_item_height"
+                    android:layout_height="@dimen/small_item_height"
+                    android:padding="@dimen/very_small_margin"
+                    android:src="@drawable/icons_column"
+                    android:tag="columns" />
+
+                <ImageView
+                    android:layout_width="@dimen/small_item_height"
+                    android:layout_height="@dimen/small_item_height"
+                    android:padding="@dimen/very_small_margin"
+                    android:src="@drawable/icons_toilet"
+                    android:tag="toilet" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

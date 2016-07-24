@@ -1,0 +1,595 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:patternedEditText="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:layout_above="@+id/btn_save_data">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_margin"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="@dimen/default_margin"
+                        android:text="@string/serial_pass_data"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/green_text" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/dark_gray_text_tranparent" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/white"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/default_margin"
+                            android:text="@string/pass_serial"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/dark_gray_text" />
+
+                        <ru.moleculus.moveme.customview.FieldDataEditText
+                            android:id="@+id/ed_serial"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@android:color/white"
+                            android:gravity="end"
+                            android:hint="@string/pass_serial"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:padding="@dimen/default_margin"
+                            android:tag="series"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/dark_gray_text"
+                            android:textColorHint="@color/dark_gray_text_tranparent"
+                            patternedEditText:pattern="@string/passport_series_pattern" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/dark_gray_text_tranparent" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/white"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/default_margin"
+                            android:text="@string/pass_number"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/dark_gray_text" />
+
+                        <ru.moleculus.moveme.customview.FieldDataEditText
+                            android:id="@+id/ed_number"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@android:color/white"
+                            android:gravity="end"
+                            android:hint="@string/pass_number"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:padding="@dimen/default_margin"
+                            android:tag="number"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/dark_gray_text"
+                            android:textColorHint="@color/dark_gray_text_tranparent"
+                            patternedEditText:pattern="@string/passport_number_pattern" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/dark_gray_text_tranparent" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_margin"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="@dimen/default_margin"
+                        android:text="@string/pass_given"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/green_text" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/dark_gray_text_tranparent" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/white"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/default_margin"
+                            android:text="@string/pass_given_place"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/dark_gray_text" />
+
+                        <ru.moleculus.moveme.customview.FieldDataEditText
+                            android:id="@+id/ed_pass_given_place"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@android:color/white"
+                            android:gravity="end"
+                            android:hint="@string/pass_given_place"
+                            android:imeOptions="actionNext"
+                            android:inputType="textCapSentences"
+                            android:padding="@dimen/default_margin"
+                            android:tag="issued_by"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/dark_gray_text"
+                            android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/dark_gray_text_tranparent" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:addStatesFromChildren="true"
+                        android:background="@drawable/default_item_selector"
+                        android:clickable="true"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/default_margin"
+                            android:text="@string/pass_given_date"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/dark_gray_text" />
+
+                        <TextView
+                            android:id="@+id/ed_pass_given_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:hint="@string/pass_given_date"
+                            android:padding="@dimen/default_margin"
+                            android:tag="date_of_issue"
+                            android:textColor="@color/dark_gray_text"
+                            android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/dark_gray_text_tranparent" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/white"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/default_margin"
+                            android:text="@string/pass_given_department"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/dark_gray_text" />
+
+                        <ru.moleculus.moveme.customview.FieldDataEditText
+                            android:id="@+id/ed_code_department"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@android:color/white"
+                            android:gravity="end"
+                            android:hint="@string/pass_given_department"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:padding="@dimen/default_margin"
+                            android:tag="code_of_department"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/dark_gray_text"
+                            android:textColorHint="@color/dark_gray_text_tranparent"
+                            patternedEditText:pattern="@string/department_pattern" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/dark_gray_text_tranparent" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_margin"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="@dimen/default_margin"
+                        android:text="@string/personal_data"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/green_text" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/dark_gray_text_tranparent" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/white"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/default_margin"
+                            android:text="@string/second_name"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/dark_gray_text" />
+
+                        <ru.moleculus.moveme.customview.FieldDataEditText
+                            android:id="@+id/ed_user_lastname"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@android:color/white"
+                            android:gravity="end"
+                            android:hint="@string/second_name"
+                            android:imeOptions="actionNext"
+                            android:inputType="textCapSentences"
+                            android:padding="@dimen/default_margin"
+                            android:tag="last_name"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/dark_gray_text"
+                            android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/dark_gray_text_tranparent" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/white"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/default_margin"
+                            android:text="@string/first_name"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/dark_gray_text" />
+
+                        <ru.moleculus.moveme.customview.FieldDataEditText
+                            android:id="@+id/ed_user_firstname"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@android:color/white"
+                            android:gravity="end"
+                            android:hint="@string/first_name"
+                            android:imeOptions="actionNext"
+                            android:inputType="textCapSentences"
+                            android:padding="@dimen/default_margin"
+                            android:tag="first_name"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/dark_gray_text"
+                            android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/dark_gray_text_tranparent" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/white"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/default_margin"
+                            android:text="@string/middle_name"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/dark_gray_text" />
+
+                        <ru.moleculus.moveme.customview.FieldDataEditText
+                            android:id="@+id/ed_user_middlename"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@android:color/white"
+                            android:gravity="end"
+                            android:hint="@string/middle_name"
+                            android:imeOptions="actionNext"
+                            android:inputType="textCapSentences"
+                            android:padding="@dimen/default_margin"
+                            android:tag="middle_name"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/dark_gray_text"
+                            android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/dark_gray_text_tranparent" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:addStatesFromChildren="true"
+                        android:background="@drawable/default_item_selector"
+                        android:clickable="true"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/default_margin"
+                            android:text="@string/user_born_date"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/dark_gray_text" />
+
+                        <TextView
+                            android:id="@+id/ed_user_birth_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:hint="@string/user_born_date"
+                            android:padding="@dimen/default_margin"
+                            android:tag="date_of_birth"
+                            android:textColor="@color/dark_gray_text"
+                            android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/dark_gray_text_tranparent" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/white"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/default_margin"
+                            android:text="@string/user_born_place"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/dark_gray_text" />
+
+                        <ru.moleculus.moveme.customview.FieldDataEditText
+                            android:id="@+id/ed_user_birth_place"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@android:color/white"
+                            android:gravity="end"
+                            android:hint="@string/user_born_place"
+                            android:imeOptions="actionNext"
+                            android:inputType="textCapSentences"
+                            android:padding="@dimen/default_margin"
+                            android:tag="location_of_birth"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/dark_gray_text"
+                            android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/dark_gray_text_tranparent" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_margin"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="@dimen/default_margin"
+                        android:text="@string/user_registration"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/green_text" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/dark_gray_text_tranparent" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:addStatesFromChildren="true"
+                        android:background="@drawable/default_item_selector"
+                        android:clickable="true"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/default_margin"
+                            android:text="@string/user_registration_date"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/dark_gray_text" />
+
+                        <TextView
+                            android:id="@+id/ed_user_registration_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:hint="@string/user_registration_date"
+                            android:padding="@dimen/default_margin"
+                            android:tag="date_of_registration"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/dark_gray_text"
+                            android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/dark_gray_text_tranparent" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/white"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/default_margin"
+                            android:text="@string/user_registration_place"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/dark_gray_text" />
+
+                        <ru.moleculus.moveme.customview.FieldDataEditText
+                            android:id="@+id/ed_user_registration_place"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@android:color/white"
+                            android:gravity="end"
+                            android:hint="@string/user_registration_place"
+                            android:imeOptions="actionDone"
+                            android:inputType="textCapSentences"
+                            android:padding="@dimen/default_margin"
+                            android:tag="location_of_registration"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/dark_gray_text"
+                            android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/dark_gray_text_tranparent" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <Button
+            android:id="@+id/btn_save_data"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_item_height"
+            android:layout_margin="@dimen/default_margin"
+            android:background="@drawable/order_button_selector"
+            android:text="@string/btn_save"
+            android:textColor="@android:color/white"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

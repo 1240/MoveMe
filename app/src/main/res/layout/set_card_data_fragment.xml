@@ -1,0 +1,283 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_white">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="@dimen/default_margin"
+                    android:text="@string/summ"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/green_text" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/dark_gray_text_tranparent" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/default_margin"
+                        android:text="@string/summ_refill"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/dark_gray_text" />
+
+                    <ru.moleculus.moveme.customview.FieldDataEditText
+                        android:id="@+id/ed_summ"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@android:color/white"
+                        android:gravity="end"
+                        android:hint="@string/summ"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:padding="@dimen/default_margin"
+                        android:tag="summ"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/dark_gray_text"
+                        android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/dark_gray_text_tranparent" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="@dimen/default_margin"
+                    android:text="@string/card_data"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/green_text" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/dark_gray_text_tranparent" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/default_margin"
+                        android:text="@string/card_number"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/dark_gray_text" />
+
+                    <ru.moleculus.moveme.customview.FieldDataEditText xmlns:patternedEditText="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/ed_card_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@android:color/white"
+                        android:gravity="end"
+                        android:hint="@string/card_number"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:padding="@dimen/default_margin"
+                        android:tag="number"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/dark_gray_text"
+                        android:textColorHint="@color/dark_gray_text_tranparent"
+                        patternedEditText:pattern="@string/card_number_pattern" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/dark_gray_text_tranparent" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/default_margin"
+                        android:text="@string/card_owner"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/dark_gray_text" />
+
+                    <ru.moleculus.moveme.customview.FieldDataEditText
+                        android:id="@+id/ed_card_owner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@android:color/white"
+                        android:gravity="end"
+                        android:hint="@string/card_owner"
+                        android:imeOptions="actionNext"
+                        android:inputType="textCapSentences"
+                        android:padding="@dimen/default_margin"
+                        android:tag="card_owner"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/dark_gray_text"
+                        android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/dark_gray_text_tranparent" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:addStatesFromChildren="true"
+                    android:background="@drawable/default_item_selector"
+                    android:clickable="true"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/default_margin"
+                        android:text="@string/card_expiry"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/dark_gray_text" />
+
+                    <TextView
+                        android:id="@+id/ed_card_expiry"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:hint="@string/card_expiry"
+                        android:padding="@dimen/default_margin"
+                        android:tag="expiration_date"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/dark_gray_text"
+                        android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/dark_gray_text_tranparent" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/default_margin"
+                        android:text="@string/card_cvs"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/dark_gray_text" />
+
+                    <ru.moleculus.moveme.customview.FieldDataEditText xmlns:patternedEditText="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/ed_card_cvs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@android:color/white"
+                        android:gravity="end"
+                        android:hint="@string/card_cvs"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        android:padding="@dimen/default_margin"
+                        android:tag="cvs"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/dark_gray_text"
+                        android:textColorHint="@color/dark_gray_text_tranparent"
+                        patternedEditText:pattern="###" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/dark_gray_text_tranparent" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_refill"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/default_item_height"
+                android:background="@drawable/order_button_selector"
+                android:text="@string/balance_refill"
+                android:textColor="@android:color/white"
+                android:layout_marginLeft="@dimen/default_margin"
+                android:layout_marginRight="@dimen/default_margin"
+                android:layout_marginTop="@dimen/default_margin" />
+
+            <Button
+                android:id="@+id/btn_save_data"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/default_item_height"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="@dimen/default_margin"
+                android:background="@drawable/order_button_selector"
+                android:text="@string/btn_save"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</android.support.design.widget.CoordinatorLayout>

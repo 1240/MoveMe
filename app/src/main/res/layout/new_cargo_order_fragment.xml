@@ -1,0 +1,416 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_white">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="@dimen/default_margin"
+                    android:text="@string/cargo_details"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/green_text" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/dark_gray_text_tranparent" />
+
+
+                <ListView
+                    android:id="@+id/cargo_list_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@color/dark_gray_text_tranparent"
+                    android:dividerHeight="1px" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/dark_gray_text_tranparent" />
+
+                <include
+                    android:id="@+id/cargo_list_footer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/cargo_list_footer" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/dark_gray_text_tranparent" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="@dimen/default_margin"
+                    android:text="@string/additional_options"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/green_text" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/dark_gray_text_tranparent" />
+
+                <LinearLayout
+                    android:id="@+id/ll_cargo_hydrobort"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/default_item_selector"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/default_item_height"
+                        android:layout_height="@dimen/default_item_height"
+                        android:padding="@dimen/small_margin"
+                        android:src="@drawable/icons_pallet_truck" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="@string/cargo_hydrobort"
+                        android:textColor="@color/dark_gray_text"
+                        android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                    <android.support.v7.widget.SwitchCompat
+                        android:id="@+id/sw_cargo_hydrobort"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/default_margin"
+                        android:tag="hydrobort" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/dark_gray_text_tranparent" />
+
+                <LinearLayout
+                    android:id="@+id/ll_cargo_hydrolift"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/default_item_selector"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/default_item_height"
+                        android:layout_height="@dimen/default_item_height"
+                        android:padding="@dimen/small_margin"
+                        android:src="@drawable/icons_hydrolift" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="@string/cargo_hydrolift"
+                        android:textColor="@color/dark_gray_text"
+                        android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                    <android.support.v7.widget.SwitchCompat
+                        android:id="@+id/sw_cargo_hydrolift"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/default_margin"
+                        android:tag="hydrolift" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/dark_gray_text_tranparent" />
+
+                <LinearLayout
+                    android:id="@+id/ll_cargo_sideloader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/default_item_selector"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/default_item_height"
+                        android:layout_height="@dimen/default_item_height"
+                        android:padding="@dimen/small_margin"
+                        android:src="@drawable/icons_side_loading" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="@string/cargo_sideloader"
+                        android:textColor="@color/dark_gray_text"
+                        android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                    <android.support.v7.widget.SwitchCompat
+                        android:id="@+id/sw_cargo_sideloader"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/default_margin"
+                        android:tag="sideloader" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/dark_gray_text_tranparent" />
+
+                <LinearLayout
+                    android:id="@+id/ll_cargo_sealing"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/default_item_selector"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/default_item_height"
+                        android:layout_height="@dimen/default_item_height"
+                        android:padding="@dimen/small_margin"
+                        android:src="@drawable/icons_arcs" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="@string/cargo_sealing"
+                        android:textColor="@color/dark_gray_text"
+                        android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                    <android.support.v7.widget.SwitchCompat
+                        android:id="@+id/sw_cargo_sealing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/default_margin"
+                        android:tag="sealing" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/dark_gray_text_tranparent" />
+
+                <LinearLayout
+                    android:id="@+id/ll_cargo_driver_russian"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/default_item_selector"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/default_item_height"
+                        android:layout_height="@dimen/default_item_height"
+                        android:padding="@dimen/small_margin"
+                        android:src="@drawable/icons_passport" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="@string/cargo_driver_russian"
+                        android:textColor="@color/dark_gray_text"
+                        android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                    <android.support.v7.widget.SwitchCompat
+                        android:id="@+id/sw_cargo_driver_russian"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/default_margin"
+                        android:tag="driver_russian" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/dark_gray_text_tranparent" />
+
+                <LinearLayout
+                    android:id="@+id/ll_cargo_attorney_letter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/default_item_selector"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/default_item_height"
+                        android:layout_height="@dimen/default_item_height"
+                        android:padding="@dimen/small_margin"
+                        android:src="@drawable/icons_bill" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="@string/cargo_attorney_letter"
+                        android:textColor="@color/dark_gray_text"
+                        android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                    <android.support.v7.widget.SwitchCompat
+                        android:id="@+id/sw_cargo_attorney_letter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/default_margin"
+                        android:tag="attorney_letter" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/dark_gray_text_tranparent" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="@dimen/default_margin"
+                    android:text="@string/ttk_center_details"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/green_text" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/dark_gray_text_tranparent" />
+
+                <LinearLayout
+                    android:id="@+id/ll_entrance_ttk"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/default_item_selector"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/default_item_height"
+                        android:layout_height="@dimen/default_item_height"
+                        android:padding="@dimen/small_margin"
+                        android:src="@drawable/icons_ttk" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="@string/ttk_entrance"
+                        android:textColor="@color/dark_gray_text"
+                        android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                    <android.support.v7.widget.SwitchCompat
+                        android:id="@+id/sw_entrance_ttk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/default_margin"
+                        android:tag="ttk_entrance" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/dark_gray_text_tranparent" />
+
+                <LinearLayout
+                    android:id="@+id/ll_entrance_center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/default_item_selector"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/default_item_height"
+                        android:layout_height="@dimen/default_item_height"
+                        android:padding="@dimen/small_margin"
+                        android:src="@drawable/icons_center" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="@string/center_entrance"
+                        android:textColor="@color/dark_gray_text"
+                        android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                    <android.support.v7.widget.SwitchCompat
+                        android:id="@+id/sw_entrance_center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/default_margin"
+                        android:tag="center_entrance" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/dark_gray_text_tranparent" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,407 @@
+<resources>
+    <string name="app_name">Move Me</string>
+
+    <string name="progress_dialog_message">Загрузка...</string>
+    <string name="accessiblity_overflow">overflow</string>
+    <!--Error Messages-->
+
+    <string name="error">Ошибка</string>
+    <string name="location_error">Координаты не найдены</string>
+    <string name="ok">OK</string>
+
+    <!--Field Patterns-->
+    <string name="phone_number_pattern">+7(###)###-##-##</string>
+    <string name="sms_code_pattern">######</string>
+    <string name="card_number_pattern">#### #### #### ####</string>
+    <string name="passport_series_pattern">## ##</string>
+    <string name="passport_number_pattern">########</string>
+    <string name="department_pattern">###-###</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="money_sign">₽</string>
+    <string name="orders">ЗАКАЗЫ</string>
+    <string name="orders_all">ОТКРЫТИЕ</string>
+    <string name="orders_my">В РАБОТЕ</string>
+    <string name="patterns">Шаблоны</string>
+
+    <string name="add_order">Добавить заказ</string>
+    <string name="evac">Эвакуатор</string>
+    <string name="pass">Пассажирская перевозка</string>
+    <string name="cargo">Грузоперевозка</string>
+
+    <string name="client_side_orders_empty_list_tooltip">У вас нет созданных заявок. \n Нажмите "+", что бы добавить.</string>
+    <string name="worker_side_orders_all_empty_list_tooltip">Для вас нет подходящих заказов. \n Попробуйте зайти сюда позже.</string>
+    <string name="worker_side_orders_my_empty_list_tooltip">У вас пока нет заказов в работе.</string>
+    <string name="client_side_template_empty_list_tooltip">У вас пока нет шаблонов</string>
+
+    <!--auth screen-->
+
+    <string name="get_sms_code_button_text">Получить код авторизации</string>
+    <string name="get_sms_code_hint">Укажите свой номер телефона. На него придет код авторизации</string>
+    <string name="submit_button_text">Войти</string>
+    <string name="send_code_again_text">Получить код повторно</string>
+    <string name="sms_waiting">SMS с кодом придет в течении %d секунд</string>
+    <string name="sms_code_hint">Код из SMS</string>
+
+    <!--logout dialog-->
+
+    <string name="log_out_title">Внимание</string>
+    <string name="log_out_message">Вы уверены что хотите выйти?</string>
+    <string name="log_out_accept">Выйти</string>
+    <string name="log_out_decline">Отмена</string>
+
+    <!--registration screen-->
+    <string name="settings">Настройки</string>
+    <string name="type_acc_client">Клиент</string>
+    <string name="type_acc_worker">Перевозчик</string>
+    <string name="personal_data">Персональные данные</string>
+    <string name="btn_save">Сохранить</string>
+    <string name="first_name">Имя</string>
+    <string name="second_name">Фамилия</string>
+    <string name="middle_name">Отчество</string>
+    <string name="mail">Почта</string>
+    <string name="registration_hint">Для начала работы, пожалуйста, укажите свои реальные данные</string>
+    <string name="invalid_type">Виберите тип аккаунта</string>
+    <string name="invalid_first_name">Введите имя</string>
+    <string name="invalid_last_name">Введите фамилию</string>
+    <string name="invalid_middle_name">Введите отчество</string>
+    <string name="invalid_mail">Введите свой email</string>
+
+
+    <!--profile screen-->
+    <string name="profile_screen_title">Мой профиль</string>
+    <string name="balance">Баланс</string>
+    <string name="balance_refill">Пополнить баланс</string>
+    <string name="finance_info">Финансовая информация</string>
+    <string name="balance_refill_title">Пополнение баланса</string>
+    <string name="summ">Сумма</string>
+    <string name="summ_refill">Сумма пополнения(руб.)</string>
+    <string name="card_data">Данные карты</string>
+    <string name="card_number">Номер карты</string>
+    <string name="card_owner">Владелец</string>
+    <string name="card_expiry">Срок действия</string>
+    <string name="card_cvs">Код CVS</string>
+    <string name="profile_exit">Выйти из учетной записи</string>
+    <string name="passport">Паспорт</string>
+    <string name="serial_pass_data">Серия и номер паспорта</string>
+    <string name="pass_serial">Серия паспорта</string>
+    <string name="pass_number">Номер паспорта</string>
+    <string name="pass_given">Паспорт выдан</string>
+    <string name="pass_given_place">Место выдачи</string>
+    <string name="pass_given_date">Дата выдачи</string>
+    <string name="pass_given_department">Код подразделения</string>
+    <string name="user_born_date">Дата рождения</string>
+    <string name="user_born_place">Место рождения</string>
+    <string name="user_registration">Регистрация</string>
+    <string name="user_registration_date">Дата регистрации</string>
+    <string name="user_registration_place">Место регистрации</string>
+    <string name="no_data">Не указаны</string>
+    <string name="verify_button_text">Пройти верификацию</string>
+
+    <!--price screen-->
+    <string name="price_screen_title">Цены</string>
+    <string name="price_range">Ценовая вилка</string>
+    <string name="price_first_2_hours">Первые 2 часа</string>
+    <string name="additional_hour">Дополнительный час</string>
+    <string name="km_per_mkad">За МКАД/1км</string>
+    <string name="currency_unit">руб.</string>
+    <string name="save_price">Сохранить цены</string>
+
+    <!--orders screen-->
+    <string name="new_evac_title">Эвакуация транспорта</string>
+    <string name="description">ОПИСАНИЕ</string>
+    <string name="comment_hint">Комментарии к заказу</string>
+    <string name="route">МАРШРУТ</string>
+    <string name="address">Адрес</string>
+    <string name="new_address"> + Новый адрес</string>
+    <string name="date_and_time">ДАТА И ВРЕМЯ </string>
+    <string name="date">Дата</string>
+    <string name="evac_details_title">ЭВАКУАЦИЯ</string>
+    <string name="evac_weight">Вес ТС, т</string>
+    <string name="evac_type">Тип транспорта</string>
+    <string name="evac_wheel_lock_type">Блокировка колес</string>
+    <string name="evac_place">Место евакуации</string>
+    <string name="evac_conditions">ОБСТОЯТЕЛЬСТВА ЭВАКУАЦИИ</string>
+    <string name="evac_ditch">Подъем из кювета</string>
+    <string name="evac_upside_down">Перевертыш</string>
+    <string name="evac_no_tow_rope">Без буксира</string>
+    <string name="evac_low_ride">Низкая посадка авто</string>
+    <string name="photos">ФОТОГРАФИИ</string>
+    <string name="tariffing">ТАРИФИКАЦИЯ</string>
+    <string name="tariffing_first_2_hours">Первые 2 часа</string>
+    <string name="tariffing_next_hours">Последующие</string>
+    <string name="tariffing_ttk_entrance">Въезд в ТТК</string>
+    <string name="tariffing_center_entance">Въезд в центер</string>
+    <string name="tariffing_out_of_mkad_per_km">За МКАД/1км</string>
+    <string name="button_send_order_text">Разместить заказ</string>
+    <string name="car_details_title">АВТОМОБИЛЬ</string>
+    <string name="car_type">Тип транспорта</string>
+    <string name="car_class">Класс авто</string>
+    <string name="car_count">Количество машин</string>
+    <string name="car_name">Марка авто</string>
+    <string name="choice_hint">Выбрать</string>
+    <string name="additional_options">ДОПОЛНИТЕЛЬНЫЕ ОПЦИИ</string>
+    <string name="pass_children">Перевозка детей</string>
+    <string name="pass_wedding">Свадьба</string>
+    <string name="pass_column">Колонна</string>
+    <string name="pass_toilet">Туалет</string>
+    <string name="cargo_details">ГРУЗ</string>
+    <string name="new_cargo">+ Новый груз</string>
+    <string name="cargo_hydrobort">Гидравлическая тележка</string>
+    <string name="cargo_hydrolift">Гидролифт</string>
+    <string name="cargo_sideloader">Боковая погрузка</string>
+    <string name="cargo_sealing">Дужки для пломбы</string>
+    <string name="cargo_driver_russian">Водитель - гражданин РФ</string>
+    <string name="cargo_attorney_letter">Отправить доверенность</string>
+    <string name="ttk_center_details">ТТК/ЦЕНТР</string>
+    <string name="center_entrance">Въезд в Центр </string>
+    <string name="ttk_entrance">Въезд в ТТК</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <!--location screen-->
+
+    <string name="location_screen_title">Адрес</string>
+    <string name="location_address">АДРЕС</string>
+    <string name="location_city">Город</string>
+    <string name="location_street">Улица</string>
+    <string name="location_house">Дом</string>
+    <string name="location_block">Корпус</string>
+    <string name="location_block_number">Подъезд</string>
+    <string name="location_additional">ДОПОЛНИТЕЛЬНО</string>
+    <string name="location_contact">Контактное лицо</string>
+    <string name="location_phone">Телефон</string>
+    <string name="location_comment">Коментарии</string>
+    <string name="location_save">Сохранить адрес</string>
+
+    <!--cargo screen -->
+    <string name="cargo_screen_title">Новый груз</string>
+    <string name="cargo_main">ОСНОВНОЕ</string>
+    <string name="cargo_description">Описание</string>
+    <string name="cargo_weight">Общий вес, кг</string>
+    <string name="cargo_lenght">Длина, м</string>
+    <string name="cargo_width">Ширина, м</string>
+    <string name="cargo_height">Высота, м</string>
+    <string name="cargo_packaging_type">Тип упаковки</string>
+    <string name="cargo_temp_mode">ТЕМПЕРАТУРНЫЙ РЕЖИМ</string>
+    <string name="cargo_refrigerator">Рефрижератор</string>
+    <string name="cargo_temp_coin">°C</string>
+    <string name="cargo_insurance_title">СТРАХОВКА ГРУЗА</string>
+    <string name="cargo_insurance">Страховка</string>
+    <string name="cargo_insurance_sum">Сумма</string>
+    <string name="cargo_pic">ФОТОГРАФИЯ ГРУЗА</string>
+    <string name="cargo_hint">Груз</string>
+    <string name="cargo_save">Добавить груз</string>
+
+    <!--template screen-->
+    <string name="template_screen_title">Готово</string>
+    <string name="template_message_title">Ваш заказ размещен!</string>
+    <string name="template_message">Вы можете сохранить параметры заказа в шаблон для быстрого вызова</string>
+    <string name="template_save">Сохранить шаблон</string>
+    <string name="template_cancel">Отмена</string>
+
+    <string-array name="client_side_names">
+        <item>Карта</item>
+        <item>Заказы</item>
+        <item>Шаблоны</item>
+        <item>Профиль</item>
+        <item>Цены</item>
+    </string-array>
+
+    <string-array name="client_side_icons">
+        <item>@drawable/ic_map_black_24dp</item>
+        <item>@drawable/ic_list_black_24dp</item>
+        <item>@drawable/ic_history_black_24dp</item>
+        <item>@drawable/ic_person_black_24dp</item>
+        <item>@drawable/ic_receipt_black_24dp</item>
+    </string-array>
+
+    <string-array name="worker_side_names">
+        <item>Карта</item>
+        <item>Заказы</item>
+        <item>Машины</item>
+        <item>Профиль</item>
+    </string-array>
+
+    <string-array name="worker_side_icons">
+        <item>@drawable/ic_map_black_24dp</item>
+        <item>@drawable/ic_list_black_24dp</item>
+        <item>@drawable/ic_directions_car_black_24dp</item>
+        <item>@drawable/ic_person_black_24dp</item>
+    </string-array>
+
+    <string-array name="user_image_dialog">
+        <item>Взять в библиотеке</item>
+        <item>Использовать камеру</item>
+    </string-array>
+
+    <string-array name="packaging_type">
+        <item>Бочки</item>
+        <item>Груз в паллетах</item>
+        <item>Коробки</item>
+        <item>Мешки</item>
+        <item>Мебель с сборе</item>
+        <item>Мебель в разобранном виде</item>
+        <item>Строительный мусор</item>
+        <item>Другое</item>
+    </string-array>
+
+    <string-array name="pass_vehicle_type">
+        <item>Легковой автомобиль</item>
+        <item>Микроавтобус</item>
+        <item>Автобус</item>
+    </string-array>
+
+    <string-array name="pass_vehicle_class">
+        <item>Эконом-класс</item>
+        <item>Бизнес-класс</item>
+        <item>Представительский класс</item>
+    </string-array>
+
+    <string-array name="evac_vehicle_type">
+        <item>Мотоцикл, скутер или квадроцикл</item>
+        <item>Легковой автомобиль</item>
+        <item>Легковой а/м представительского класса</item>
+        <item>Минивен или внедорожник</item>
+        <item>Водная техника</item>
+        <item>Грузовой автомобиль</item>
+    </string-array>
+
+    <string-array name="evac_vehicle_wheels">
+        <item>Не заблокированы</item>
+        <item>Заблокировано 1 колесо</item>
+        <item>Заблокировано 2 колеса</item>
+        <item>Заблокировано 4 колеса(в т.ч. коробка передач)</item>
+    </string-array>
+
+    <string-array name="evac_vehicle_cond">
+        <item>Без особых условий</item>
+        <item>В гараже</item>
+        <item>В узком дворе</item>
+        <item>На подземных парковках</item>
+        <item>Надземных парковках</item>
+        <item>Подьем из кювета</item>
+    </string-array>
+
+    <string-array name="pass_num">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+        <item>32</item>
+        <item>33</item>
+        <item>34</item>
+        <item>35</item>
+        <item>36</item>
+        <item>37</item>
+        <item>38</item>
+        <item>39</item>
+        <item>40</item>
+        <item>41</item>
+        <item>42</item>
+        <item>43</item>
+        <item>44</item>
+        <item>45</item>
+        <item>46</item>
+        <item>47</item>
+        <item>48</item>
+        <item>49</item>
+        <item>50</item>
+        <item>51</item>
+        <item>52</item>
+        <item>53</item>
+        <item>54</item>
+        <item>55</item>
+        <item>56</item>
+        <item>57</item>
+        <item>58</item>
+        <item>59</item>
+        <item>60</item>
+        <item>61</item>
+        <item>62</item>
+        <item>63</item>
+        <item>64</item>
+        <item>65</item>
+        <item>66</item>
+        <item>67</item>
+        <item>68</item>
+        <item>69</item>
+        <item>70</item>
+        <item>71</item>
+        <item>72</item>
+        <item>73</item>
+        <item>74</item>
+        <item>75</item>
+        <item>76</item>
+        <item>77</item>
+        <item>78</item>
+        <item>79</item>
+        <item>80</item>
+        <item>81</item>
+        <item>82</item>
+        <item>83</item>
+        <item>84</item>
+        <item>85</item>
+        <item>86</item>
+        <item>87</item>
+        <item>88</item>
+        <item>89</item>
+        <item>90</item>
+        <item>91</item>
+        <item>92</item>
+        <item>93</item>
+        <item>94</item>
+        <item>95</item>
+        <item>96</item>
+        <item>97</item>
+        <item>98</item>
+        <item>99</item>
+        <item>100</item>
+    </string-array>
+
+    <string name="title_activity_set_order_location">Выберите координаты</string>
+
+
+    <!--verify screen-->
+    <string name="verify_screen_title">Верифицируйте себя</string>
+    <string name="verify_description">Верификация - проверка достоверности данных пользователя, которая основана на отправке письма со <b>специальным кодом</b> по адресу места жительства участника.\n\nДля верификации нужно загрузить отсканированную <b>первую страницу паспорта</b> и <b>прописку</b>.</string>
+    <string name="load_docs">Загрузить документы</string>
+    <string name="load_docs_description">Сфотографируйте или загрузите из телефона <b>первую страницу паспорта</b> и <b>прописку</b></string>
+    <string name="load_docs_first_page">Первая страница паспорта</string>
+    <string name="load_docs_registration_place">Страница с пропиской</string>
+    <string name="load_docs_send">Отправить</string>
+    <string name="enter_code">Ввести код</string>
+    <string name="enter_code_description">Введите специальный код, присланный вам в письме</string>
+    <string name="enter_code_hint">Код из письма</string>
+    <string name="enter_code_done">Готово</string>
+
+</resources>
+
+

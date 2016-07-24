@@ -1,0 +1,389 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_white">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="@dimen/default_margin"
+                    android:text="@string/car_details_title"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/green_text" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/dark_gray_text_tranparent" />
+
+                <LinearLayout
+                    android:id="@+id/ll_car_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/default_item_selector"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/default_margin"
+                        android:gravity="center_vertical"
+                        android:text="@string/car_type"
+                        android:textColor="@color/dark_gray_text"
+                        android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                    <Spinner
+                        android:id="@+id/tv_car_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/default_item_height"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/default_margin"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:hint="@string/choice_hint"
+                        android:tag="pass_vehicle_type"
+                        android:textColor="@color/dark_gray_text_tranparent"
+                        android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                    <ImageView
+                        android:layout_width="1dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_navigation_chevron_right" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/dark_gray_text_tranparent" />
+
+                <LinearLayout
+                    android:id="@+id/ll_car_class"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/default_item_selector"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/default_margin"
+                        android:gravity="center_vertical"
+                        android:text="@string/car_class"
+                        android:textColor="@color/dark_gray_text"
+                        android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                    <Spinner
+                        android:id="@+id/tv_car_class"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/default_item_height"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/default_margin"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:hint="@string/choice_hint"
+                        android:tag="pass_vehicle_class"
+                        android:textColor="@color/dark_gray_text_tranparent"
+                        android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                    <ImageView
+                        android:layout_width="1dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_navigation_chevron_right" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/dark_gray_text_tranparent" />
+
+                <LinearLayout
+                    android:id="@+id/ll_car_count"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/default_item_selector"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/default_margin"
+                        android:gravity="center_vertical"
+                        android:text="@string/car_count"
+                        android:textColor="@color/dark_gray_text"
+                        android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                    <Spinner
+                        android:id="@+id/tv_car_count"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/default_item_height"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/default_margin"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:hint="@string/choice_hint"
+                        android:tag="pass_num"
+                        android:textColor="@color/dark_gray_text_tranparent"
+                        android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                    <ImageView
+                        android:layout_width="1dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_navigation_chevron_right" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/dark_gray_text_tranparent" />
+
+                <LinearLayout
+                    android:id="@+id/ll_car_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/default_item_selector"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/default_margin"
+                        android:gravity="center_vertical"
+                        android:text="@string/car_name"
+                        android:textColor="@color/dark_gray_text"
+                        android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                    <ru.moleculus.moveme.customview.FieldDataEditText
+                        android:id="@+id/tv_car_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/default_item_height"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/default_margin"
+                        android:gravity="center_vertical|right"
+                        android:hint="@string/choice_hint"
+                        android:tag="pass_auto_type"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/dark_gray_text_tranparent"
+                        android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                    <ImageView
+                        android:layout_width="1dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_navigation_chevron_right" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/dark_gray_text_tranparent" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="@dimen/default_margin"
+                    android:text="@string/additional_options"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/green_text" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/dark_gray_text_tranparent" />
+
+                <LinearLayout
+                    android:id="@+id/ll_pass_children"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/default_item_selector"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/default_item_height"
+                        android:layout_height="@dimen/default_item_height"
+                        android:padding="@dimen/small_margin"
+                        android:src="@drawable/icons_kids" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="@string/pass_children"
+                        android:textColor="@color/dark_gray_text"
+                        android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                    <android.support.v7.widget.SwitchCompat
+                        android:id="@+id/sw_pass_children"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/default_margin"
+                        android:tag="children" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/dark_gray_text_tranparent" />
+
+                <LinearLayout
+                    android:id="@+id/ll_wedding"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/default_item_selector"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/default_item_height"
+                        android:layout_height="@dimen/default_item_height"
+                        android:padding="@dimen/small_margin"
+                        android:src="@drawable/icons_wedding" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="@string/pass_wedding"
+                        android:textColor="@color/dark_gray_text"
+                        android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                    <android.support.v7.widget.SwitchCompat
+                        android:id="@+id/sw_pass_wedding"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/default_margin"
+                        android:tag="wedding" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/dark_gray_text_tranparent" />
+
+                <LinearLayout
+                    android:id="@+id/ll_pass_column"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/default_item_selector"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/default_item_height"
+                        android:layout_height="@dimen/default_item_height"
+                        android:padding="@dimen/small_margin"
+                        android:src="@drawable/icons_column" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="@string/pass_column"
+                        android:textColor="@color/dark_gray_text"
+                        android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                    <android.support.v7.widget.SwitchCompat
+                        android:id="@+id/sw_pass_column"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/default_margin"
+                        android:tag="columns" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/dark_gray_text_tranparent" />
+
+                <LinearLayout
+                    android:id="@+id/ll_pass_toilet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/default_item_selector"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/default_item_height"
+                        android:layout_height="@dimen/default_item_height"
+                        android:padding="@dimen/small_margin"
+                        android:src="@drawable/icons_toilet" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="@string/pass_toilet"
+                        android:textColor="@color/dark_gray_text"
+                        android:textColorHint="@color/dark_gray_text_tranparent" />
+
+                    <android.support.v7.widget.SwitchCompat
+                        android:id="@+id/sw_pass_toilet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/default_margin"
+                        android:tag="toilet" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/dark_gray_text_tranparent" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</android.support.design.widget.CoordinatorLayout>
